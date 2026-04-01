@@ -6,7 +6,7 @@ const Navbar = () => {
   const isHome = location.pathname === "/";
 
   const navItems = [
-    { label: "About", href: isHome ? "#about" : "/#about" },
+    { label: "About", href: "/about" },
     { label: "Work", href: "/work" },
     { label: "Contact", href: isHome ? "#contact" : "/#contact" },
   ];
