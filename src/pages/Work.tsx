@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import projects from "@/data/projects";
+import ContactSection from "@/components/ContactSection";
 
 const Work = () => {
   return (
@@ -77,6 +78,7 @@ const Work = () => {
           </div>
         </div>
       </main>
+      <ContactSection />
       <Footer />
     </div>
   );

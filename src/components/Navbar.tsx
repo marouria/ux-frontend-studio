@@ -9,7 +9,7 @@ const Navbar = () => {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Work", href: "/work" },
-    { label: "Contact", href: isHome ? "#contact" : "/#contact" },
+    { label: "Contact", href: isHome ? "#contact" : "/contact" },
   ];
 
   return (
@@ -21,28 +21,18 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="font-display text-lg text-foreground">
-          Portfolio
+          Marie leuliette
         </Link>
         <div className="flex items-center gap-8">
-          {navItems.map((item) =>
-            item.href.startsWith("/") && !item.href.startsWith("/#") ? (
-              <Link
-                key={item.label}
-                to={item.href}
-                className="font-body text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <a
-                key={item.label}
-                href={item.href}
-                className="font-body text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {item.label}
-              </a>
-            )
-          )}
+          {navItems.map((item) => (
+            <Link
+              key={item.label}
+              to={item.href}
+              className="font-body text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
       </div>
     </motion.nav>

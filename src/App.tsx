@@ -7,7 +7,9 @@ import Index from "./pages/Index.tsx";
 import Work from "./pages/Work.tsx";
 import About from "./pages/About.tsx";
 import CaseStudy from "./pages/CaseStudy.tsx";
+import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
@@ -17,11 +19,13 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/work" element={<Work />} />
           <Route path="/work/:slug" element={<CaseStudy />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

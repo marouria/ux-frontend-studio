@@ -1,6 +1,7 @@
 export interface Project {
   slug: string;
   number: string;
+  link?: string;
   title: string;
   role: string;
   description: string;
@@ -18,201 +19,380 @@ export interface Project {
 
 const projects: Project[] = [
   {
-    slug: "ecommerce-checkout-redesign",
+    slug: "3d-virtual-experience",
     number: "01",
-    title: "E-commerce Checkout Redesign",
-    role: "Lead UX Researcher",
-    description: "Reduced cart abandonment by 34% through iterative usability testing and A/B experimentation across 12 markets.",
-    tags: ["User Testing", "A/B Testing", "Prototyping"],
-    impact: "34% reduction in cart abandonment",
-    timeline: "Jan 2023 — Jun 2023",
-    team: "2 Designers, 3 Engineers, 1 PM",
-    overview: "A comprehensive redesign of the checkout experience for a global e-commerce platform serving millions of users across 12 international markets. The project aimed to simplify the purchase flow and reduce friction points identified through quantitative and qualitative research.",
-    problem: "The existing checkout flow had a 68% cart abandonment rate, significantly above industry benchmarks. Users reported confusion around shipping options, payment methods, and order summaries. The flow was originally designed for a single market and had been patched incrementally for international expansion, resulting in inconsistent experiences.",
-    targetUsers: "Online shoppers across 12 markets, ranging from tech-savvy millennials to older demographics less comfortable with digital transactions. Key segments included first-time buyers, returning customers, and mobile-first users in emerging markets.",
+    link: "https://artaufeminin.fr/",
+    title: "Immersive 3D Art Discovery Experience",
+    role: "UX Designer",
+    description:
+      "Designed an immersive and intuitive 3D art exploration experience, iteratively refined through usability testing with a community of 8,000 art enthusiasts.",
+    tags: [
+      "User Research",
+      "Usability Testing",
+      "Prototyping",
+      "3D Experience",
+    ],
+    impact: "800 applications for the first exhibition",
+    timeline: "Feb 2026 — Present",
+    team: "1 Designer, 1 Developer",
+    overview:
+      "Designed an immersive online exhibition platform to increase visibility for women artists and enable users to seamlessly discover and purchase artworks.",
+    problem:
+      "How might we design an online art gallery that enables users to explore, discover, and purchase artworks through an intuitive and engaging digital experience?",
+    targetUsers:
+      "Art enthusiasts interested in discovering emerging artists, engaging with art in meaningful ways, and purchasing pieces online. Key segments included first-time buyers and regular collectors.",
     contribution: [
-      "Planned and conducted 24 moderated usability sessions across 4 markets",
-      "Designed and analyzed A/B tests for 6 checkout flow variations",
-      "Created journey maps and identified 14 friction points in the existing flow",
-      "Collaborated with designers to iterate on prototypes based on research findings",
-      "Presented insights and recommendations to C-level stakeholders",
+      "Validated key user journeys through interactive prototype testing",
+      "Synthesized user feedback into actionable design improvements",
+      "Built the first MVP, translating concepts into a functional product experience",
+      "Iterated on prototypes in close collaboration with users based on research insights",
+      "Presented research findings and design recommendations to stakeholders",
     ],
     process: [
-      { title: "Discovery", description: "Analyzed existing analytics data, conducted stakeholder interviews, and performed competitive benchmarking across 8 competitors." },
-      { title: "Research", description: "Ran 24 moderated usability sessions, deployed a survey to 2,000+ users, and mapped the end-to-end journey for 4 key user segments." },
-      { title: "Synthesis", description: "Identified 14 friction points, prioritized them using an impact/effort matrix, and created actionable design recommendations." },
-      { title: "Validation", description: "Designed and ran 6 A/B tests over 8 weeks, iterating on the checkout flow based on quantitative results and qualitative feedback." },
+      {
+        title: "Discovery",
+        description:
+          "Defined how a 3D virtual exhibition could support both art discovery and purchasing behaviors, aligning product goals with artists’ visibility needs.",
+      },
+      {
+        title: "Research",
+        description:
+          "Conducted usability tests with a community of 8,000 art enthusiasts to understand how users explore, navigate, and engage with artworks in a 3D environment.",
+      },
+      {
+        title: "Synthesis",
+        description:
+          "Identified key friction points in navigation, spatial orientation, and purchase intent, shaping core user flows for exploration and buying.",
+      },
+      {
+        title: "Ideation",
+        description:
+          "Designed and iterated on 3D interaction patterns and gallery layouts to create a balance between immersion and usability.",
+      },
+      {
+        title: "Validation",
+        description:
+          "Continuously tested prototypes to improve discoverability of artworks and reduce friction in the transition from exploration to purchase.",
+      },
     ],
-    outcomes: [
-      "34% reduction in cart abandonment rate",
-      "22% increase in checkout completion on mobile",
-      "12-point improvement in post-purchase NPS score",
-      "Research framework adopted by 3 other product teams",
-    ],
+    outcomes: [],
   },
   {
-    slug: "design-system-component-library",
-    number: "02",
-    title: "Design System & Component Library",
-    role: "Frontend Developer",
-    description: "Built a React-based design system serving 8 product teams, with full accessibility compliance and comprehensive documentation.",
-    tags: ["React", "TypeScript", "Accessibility"],
-    impact: "8 teams unified under one system",
-    timeline: "Mar 2022 — Dec 2022",
-    team: "2 Designers, 2 Engineers",
-    overview: "A unified design system and component library built with React and TypeScript, designed to replace fragmented UI implementations across 8 product teams. The system includes 60+ components, comprehensive documentation, and automated accessibility testing.",
-    problem: "Each product team maintained its own UI components, leading to visual inconsistency, duplicated effort, and accessibility gaps. New features took 40% longer to build due to lack of reusable components, and the brand experience varied significantly across products.",
-    targetUsers: "Internal product teams (designers and developers) who build customer-facing applications. Secondary users include QA engineers who test for accessibility and consistency.",
-    contribution: [
-      "Architected the component library structure and API design",
-      "Implemented 40+ React components with full TypeScript support",
-      "Set up automated accessibility testing with axe-core and Storybook",
-      "Created comprehensive documentation and migration guides",
-      "Led adoption workshops for 8 product teams",
-    ],
-    process: [
-      { title: "Audit", description: "Catalogued existing components across all teams, identifying 120+ unique UI elements with significant overlap and inconsistency." },
-      { title: "Architecture", description: "Defined the component API, theming system, and token structure. Established accessibility requirements (WCAG 2.1 AA) as a non-negotiable baseline." },
-      { title: "Implementation", description: "Built components iteratively, starting with primitives and composing complex patterns. Each component included unit tests, a11y tests, and Storybook documentation." },
-      { title: "Adoption", description: "Ran workshops, created migration guides, and embedded with teams during their first sprint using the new system." },
-    ],
-    outcomes: [
-      "8 product teams migrated to the unified system",
-      "40% reduction in time-to-build for new features",
-      "Full WCAG 2.1 AA compliance across all components",
-      "60+ components with 95% test coverage",
-    ],
-  },
-  {
-    slug: "patient-portal-discovery",
-    number: "03",
-    title: "Patient Portal Discovery",
-    role: "UX Researcher",
-    description: "Led generative research with 40+ participants to define the information architecture of a healthcare patient portal.",
-    tags: ["Interviews", "Journey Mapping", "IA"],
-    impact: "40+ participant research study",
-    timeline: "Jun 2022 — Oct 2022",
-    team: "1 Designer, 2 Engineers, 1 Clinical Advisor",
-    overview: "A generative research project to inform the design of a new patient portal for a regional healthcare provider. The portal needed to serve diverse patient populations while meeting strict regulatory and accessibility requirements.",
-    problem: "Patients had no centralized digital access to their health records, appointment scheduling, or provider communication. The existing system relied on phone calls and paper forms, leading to long wait times, missed appointments, and low patient satisfaction scores.",
-    targetUsers: "Patients aged 18–80+ with varying levels of digital literacy, including elderly patients managing chronic conditions, young professionals seeking convenience, and caregivers managing family members' health needs.",
-    contribution: [
-      "Designed and conducted 40+ semi-structured interviews across 5 patient segments",
-      "Facilitated card sorting and tree testing sessions to define the information architecture",
-      "Created detailed journey maps for 4 primary user flows",
-      "Synthesized findings into a research report with prioritized design recommendations",
-      "Presented findings to clinical and executive stakeholders",
-    ],
-    process: [
-      { title: "Planning", description: "Defined research questions, recruited diverse participants across 5 segments, and developed interview and activity guides." },
-      { title: "Generative Research", description: "Conducted 40+ semi-structured interviews, 3 focus groups, and diary studies with 12 participants over 2 weeks." },
-      { title: "Information Architecture", description: "Ran card sorting sessions with 30 participants and validated the resulting IA with tree testing across key user flows." },
-      { title: "Synthesis & Handoff", description: "Created journey maps, personas, and a comprehensive research report. Facilitated design workshops to translate insights into product requirements." },
-    ],
-    outcomes: [
-      "Defined the IA for 6 core portal sections",
-      "Identified 3 previously unknown patient needs",
-      "Research directly informed the MVP feature set",
-      "92% task completion rate in tree testing validation",
-    ],
-  },
-  {
-    slug: "mobile-banking-redesign",
-    number: "04",
-    title: "Mobile Banking App Redesign",
-    role: "UX Researcher & Designer",
-    description: "Conducted contextual inquiries and usability studies to reimagine the mobile banking experience for underserved communities.",
-    tags: ["Contextual Inquiry", "Prototyping", "Usability Testing"],
-    impact: "4.6★ app store rating post-launch",
-    timeline: "Sep 2021 — Mar 2022",
-    team: "2 Designers, 4 Engineers, 1 PM",
-    overview: "A ground-up redesign of a mobile banking application focused on financial inclusion. The project prioritized accessibility, simplicity, and trust to serve communities historically underserved by digital banking.",
-    problem: "The existing app had poor adoption among target demographics due to complex navigation, jargon-heavy language, and a lack of features relevant to users' financial realities (e.g., cash-based budgeting, remittances). The app store rating was 2.8★ with frequent complaints about usability.",
-    targetUsers: "Adults in underserved communities with limited banking history, including gig workers, immigrants sending remittances, and older adults transitioning from cash-only financial management.",
-    contribution: [
-      "Conducted 16 contextual inquiries in users' homes and workplaces",
-      "Designed low and high-fidelity prototypes based on research insights",
-      "Ran 3 rounds of usability testing with 30+ participants",
-      "Advocated for plain-language content and culturally appropriate design patterns",
-      "Collaborated with engineers to ensure feasibility of proposed solutions",
-    ],
-    process: [
-      { title: "Contextual Research", description: "Visited 16 participants in their homes and workplaces to understand how they manage money, what barriers they face, and what trust means in the context of digital banking." },
-      { title: "Design Exploration", description: "Created personas, mapped financial journeys, and explored design concepts through rapid sketching and low-fidelity prototyping." },
-      { title: "Iterative Testing", description: "Ran 3 rounds of moderated usability testing, each followed by design iterations. Tested in both English and Spanish." },
-      { title: "Launch & Measurement", description: "Supported the engineering team during implementation and set up post-launch analytics to measure adoption and satisfaction." },
-    ],
-    outcomes: [
-      "App store rating improved from 2.8★ to 4.6★",
-      "52% increase in monthly active users within 3 months",
-      "35% increase in successful first-time transactions",
-      "Featured in a case study on financial inclusion design",
-    ],
-  },
-  {
-    slug: "saas-onboarding-optimization",
-    number: "05",
-    title: "SaaS Onboarding Optimization",
-    role: "UX Researcher",
-    description: "Redesigned the onboarding flow using funnel analysis and moderated testing, increasing activation rates by 28%.",
-    tags: ["Funnel Analysis", "Moderated Testing", "Heuristic Evaluation"],
-    impact: "28% increase in activation rate",
-    timeline: "Apr 2021 — Aug 2021",
-    team: "1 Designer, 2 Engineers, 1 Data Analyst",
-    overview: "An optimization project focused on improving the onboarding experience for a B2B SaaS platform. The goal was to increase the percentage of new users who reach their 'aha moment' within the first session.",
-    problem: "Only 31% of new signups completed the onboarding flow, and even fewer reached the activation milestone. Funnel analysis revealed significant drop-offs at account setup and first-project creation. Users reported feeling overwhelmed by options and unclear about next steps.",
-    targetUsers: "B2B SaaS users, primarily product managers and team leads at mid-size companies. Users ranged from tech-savvy early adopters to less technical stakeholders evaluating the tool for their teams.",
-    contribution: [
-      "Conducted heuristic evaluation of the existing onboarding flow",
-      "Analyzed funnel data to identify key drop-off points",
-      "Ran 12 moderated usability sessions with new users",
-      "Collaborated with the designer on 4 redesign iterations",
-      "Defined success metrics and measurement framework",
-    ],
-    process: [
-      { title: "Analysis", description: "Reviewed funnel analytics, conducted a heuristic evaluation, and interviewed customer success managers to understand common onboarding challenges." },
-      { title: "User Research", description: "Ran 12 moderated sessions with new users, observing their first experience with the product and capturing pain points and moments of delight." },
-      { title: "Redesign", description: "Worked with the designer on 4 iterations of the onboarding flow, progressively simplifying the experience and adding contextual guidance." },
-      { title: "Validation", description: "A/B tested the new flow against the original, measuring activation rate, time-to-activation, and user satisfaction." },
-    ],
-    outcomes: [
-      "28% increase in activation rate",
-      "40% reduction in time-to-first-value",
-      "15-point increase in onboarding satisfaction score",
-      "Approach became the template for future feature onboarding",
-    ],
-  },
-  {
-    slug: "accessibility-audit-remediation",
+    slug: "gamified-skills-assessment-platform",
     number: "06",
-    title: "Accessibility Audit & Remediation",
+    link: "https://eva.anlci.gouv.fr/",
+    title: "Gamification Platform 🎮",
     role: "Frontend Developer",
-    description: "Performed a comprehensive WCAG 2.1 AA audit and led remediation across a suite of web applications.",
-    tags: ["WCAG 2.1", "Screen Readers", "Semantic HTML"],
-    impact: "Full AA compliance achieved",
-    timeline: "Nov 2020 — Feb 2021",
-    team: "1 Designer, 3 Engineers",
-    overview: "A comprehensive accessibility audit and remediation project across a suite of 5 web applications. The goal was to achieve full WCAG 2.1 AA compliance and establish ongoing accessibility practices within the engineering team.",
-    problem: "An external audit revealed 200+ accessibility violations across the application suite, including missing alt text, keyboard navigation failures, insufficient color contrast, and improper use of ARIA attributes. The company faced potential legal risk and was losing users who relied on assistive technologies.",
-    targetUsers: "End users who rely on assistive technologies (screen readers, keyboard navigation, voice control), users with low vision or color blindness, and users with motor impairments. Secondarily, internal developers who needed to maintain accessibility standards going forward.",
+    description:
+      "Developed interactive and gamified assessment tools to help identify literacy and numeracy gaps, enabling counselors to deliver more personalized and effective support.",
+    tags: [
+      "Frontend Development",
+      "Gamification",
+      "Data Visualization",
+      "Accessibility",
+    ],
+    impact:
+      "Improved assessment efficiency and quality of support provided to beneficiaries",
+    timeline: "Oct 2021 — Jan 2025",
+    team: "2 Designers, 4 Engineers",
+    overview:
+      "The EVA platform supports both individuals in social and employment integration programs and the professionals guiding them. This project focused on designing and developing gamified modules to assess literacy and numeracy skills, provide actionable insights, and support personalized guidance. It included interactive experiences for users, configurable tools for administrators, and data dashboards for analysis.",
+    problem:
+      "How might we help employment counselors assess literacy and numeracy challenges in an engaging, reliable, and actionable way?",
+    targetUsers:
+      "Adults facing literacy and numeracy challenges, as well as employment counselors who need structured, reliable insights to guide support and training programs.",
     contribution: [
-      "Conducted a detailed audit of 5 web applications using automated and manual testing",
-      "Prioritized 200+ violations by severity and user impact",
-      "Led remediation of critical and major violations across the codebase",
-      "Established coding standards and linting rules for ongoing compliance",
-      "Trained 12 developers on accessible development practices",
+      "Developed interactive and gamified user interfaces to assess core skills",
+      "Collaborated with public institutions to translate evaluation frameworks into functional digital experiences",
+      "Designed responsive and accessible experiences for both end users and administrators",
+      "Implemented progression systems with levels and real-time skill evaluation",
+      "Built a configurable admin interface to create and manage assessment modules",
+      "Developed scoring logic aligned with official evaluation criteria",
+      "Created dashboards to visualize user competency profiles",
+      "Enabled data export features to support analysis and reporting workflows",
     ],
     process: [
-      { title: "Audit", description: "Used axe-core, WAVE, and manual testing (screen readers, keyboard-only navigation) to identify and document all violations across 5 applications." },
-      { title: "Prioritization", description: "Categorized violations by WCAG level, severity, and user impact. Created a remediation roadmap with clear milestones." },
-      { title: "Remediation", description: "Fixed 200+ violations over 10 weeks, focusing on semantic HTML, keyboard navigation, ARIA patterns, and color contrast improvements." },
-      { title: "Prevention", description: "Set up axe-core in CI/CD, created ESLint rules for accessibility, and conducted training sessions for the engineering team." },
+      {
+        title: "Understanding",
+        description:
+          "Collaborated with public institutions and domain experts to understand evaluation frameworks and translate them into digital requirements.",
+      },
+      {
+        title: "Design",
+        description:
+          "Designed interactive and engaging assessment flows with the UI Designer using gamification mechanics to encourage user engagement and reduce friction.",
+      },
+      {
+        title: "Implementation",
+        description:
+          "Developed scalable front-end modules, including game logic, progression systems, and responsive interfaces for multiple user types.",
+      },
+      {
+        title: "Data Analysis",
+        description:
+          "Built dashboards and configurable tools enabling counselors to analyze results, track progress, and adapt support strategies.",
+      },
+      {
+        title: "Validation",
+        description:
+          "Iterated on features based on user feedback and field usage to improve usability, clarity of results, and overall effectiveness.",
+      },
     ],
     outcomes: [
-      "Full WCAG 2.1 AA compliance across all 5 applications",
-      "Zero critical accessibility regressions in 6 months post-remediation",
-      "12 developers trained on accessible development",
-      "Automated a11y testing integrated into CI/CD pipeline",
+      "Reduced time required for skill assessment and reporting",
+      "Enabled more accurate and structured identification of literacy and numeracy gaps",
+      "Improved guidance toward tailored training and support programs",
+      "Enhanced engagement through gamified evaluation experiences",
+      "Increased quality and consistency of support provided by counselors",
+      "Average user satisfaction rating: 8.8 / 10",
+    ],
+  },
+  {
+    slug: "social-innovation-entrepreneurship-program",
+    number: "03",
+    link: "https://www.lp4y.org/",
+    title: "Entrepreneurship Program Design for Disadvantaged Youth",
+    role: "Project Manager",
+    description:
+      "Led user-centered entrepreneurship programs enabling youth facing social and economic barriers to develop job-ready skills through hands-on business creation and iterative learning.",
+    tags: ["Service Design", "User Research", "Facilitation", "Social Impact"],
+    impact:
+      "Improved employability and autonomy of participants through experiential learning programs",
+    timeline: "Jul 2017 — Sept 2019",
+    team: "Cross-functional teams across 17 programs",
+    overview:
+      "LP4Y develops programs where young adults build and manage micro-enterprises to gain professional and entrepreneurial skills. This role focused on designing and scaling user-centered learning experiences that combine real-world business activity, skill development, and continuous feedback.",
+    problem:
+      "How might we help out-of-school young adults build job-ready skills and confidence through hands-on, real-world entrepreneurial experiences?",
+    targetUsers:
+      "Young adults living in informal settlements with limited access to education and employment opportunities, often facing social and economic barriers.",
+    contribution: [
+      "Led and coordinated 17 entrepreneurship programs across Southeast Asia",
+      "Designed learning frameworks and tools adapted to low-resource environments",
+      "Facilitated workshops to help participants ideate, test, and iterate on micro-businesses",
+      "Coached both participants and local trainers in developing sustainable business activities",
+      "Translated field insights into continuous improvements of the programs",
+      "Created structured learning journeys combining experimentation, feedback, and skill-building",
+    ],
+    process: [
+      {
+        title: "User Understanding",
+        description:
+          "Immersed in local contexts to understand participants’ needs, constraints, motivations, and barriers to employment.",
+      },
+      {
+        title: "Co-creation",
+        description:
+          "Facilitated workshops to help participants ideate and shape their own micro-business concepts based on their skills and environment.",
+      },
+      {
+        title: "Experimentation",
+        description:
+          "Supported rapid testing of business ideas through real-world implementation and iteration.",
+      },
+      {
+        title: "Learning Design",
+        description:
+          "Structured learning journeys combining practical experience, feedback loops, and skill development.",
+      },
+      {
+        title: "Iteration & Scaling",
+        description:
+          "Continuously improved program frameworks based on field feedback and scaled them across multiple locations.",
+      },
+    ],
+    outcomes: [
+      "Enabled participants to develop job-ready and entrepreneurial skills through hands-on experience",
+      "Increased participants’ confidence and autonomy in professional environments",
+      "Improved success rate of micro-business initiatives through iterative testing",
+      "Scaled programs across 17 locations with consistent learning frameworks",
+      "Strengthened alignment between training programs and real-world economic opportunities",
+    ],
+  },
+  {
+    slug: "design-system-component-implementation",
+    number: "02",
+    link: "https://propulsebyca.fr/",
+    title: "Design System & Component Library Implementation",
+    role: "Frontend Developer",
+    description:
+      "Developed a scalable and accessible design system for an online banking platform, enabling consistent UI implementation and faster product development.",
+    tags: ["Vuejs", "TypeScript", "Design System", "Accessibility"],
+    impact: "Reduced UI inconsistencies and improved development efficiency",
+    timeline: "Apr 2024 — Sept 2024",
+    team: "1 Designers, 2 Engineers",
+    overview:
+      "Built a unified design system and component library using Vue.js and TypeScript to replace fragmented UI implementations across the platform. Delivered 60+ reusable components, comprehensive documentation, and integrated accessibility standards to ensure consistency, scalability, and compliance.",
+    problem:
+      "How might we standardize UI components across multiple banking interfaces to ensure consistency, accessibility, and scalability while improving developer efficiency?",
+    targetUsers:
+      "Frontend developers and designers working on the banking platform, needing reliable, reusable, and accessible UI components to build consistent user experiences.",
+    contribution: [
+      "Developed 40+ reusable Vue.js components with full TypeScript support",
+      "Collaborated with designers to translate UI specifications into scalable components",
+      "Set up automated accessibility testing within Storybook to ensure WCAG compliance",
+      "Documented components, usage guidelines, and migration paths for adoption",
+      "Contributed to improving consistency and reducing duplication across interfaces",
+    ],
+    process: [
+      {
+        title: "Architecture",
+        description:
+          "Defined the structure of the design system, including component taxonomy, naming conventions, and scalability principles.",
+      },
+      {
+        title: "Foundation",
+        description:
+          "Established core design tokens (colors, typography, spacing) to ensure visual consistency across all components.",
+      },
+      {
+        title: "Implementation",
+        description:
+          "Built reusable and typed Vue.js components aligned with design specifications and engineering best practices.",
+      },
+      {
+        title: "Documentation",
+        description:
+          "Created clear usage guidelines, examples, and migration documentation to support adoption by developers.",
+      },
+      {
+        title: "Validation",
+        description:
+          "Performed regular reviews to ensure compliance and component reliability.",
+      },
+    ],
+    outcomes: [
+      "Full WCAG 2.1 AA compliance across all components",
+      "Decreased time-to-build for new product features",
+      "Accelerated UI implementation through reusable components",
+      "Reduced development time for new features by 25%",
+    ],
+  },
+  {
+    slug: "women-hiking-safety-research",
+    number: "07",
+    link: "https://shecanhike.com/en",
+    title: "Women’s Hiking Experience & Safety Research",
+    role: "UX Researcher",
+    description:
+      "Conducting exploratory user research to understand the barriers, motivations, and safety perceptions of women hiking, with the goal of identifying opportunities to support more confident and independent outdoor experiences.",
+    tags: [
+      "User Research",
+      "Qualitative Research",
+      "Interviews",
+      "Field Observation",
+    ],
+    impact:
+      "Uncovered key insights into safety perception, social dynamics, and confidence barriers shaping women’s hiking behaviors",
+    timeline: "Apr 2025 — Present",
+    team: "Independent project",
+    overview:
+      "This ongoing research explores how women experience hiking, focusing on emotional, social, and safety-related factors. Through interviews and real-world observations, the project aims to better understand the gap between the desire for independence and the constraints that limit outdoor experiences.",
+    problem:
+      "How might we enable women to hike while feeling safe, confident, and at ease?",
+    targetUsers:
+      "Women interested in hiking, ranging from beginners to experienced hikers, who may face psychological, social, or safety-related barriers when considering solo or group outings.",
+    contribution: [
+      "Conducted in-depth interviews to explore motivations, fears, and decision-making processes",
+      "Organized and facilitated group hiking sessions to observe real behaviors and social dynamics",
+      "Collected qualitative insights on perceived vs actual safety concerns",
+      "Identified patterns in preparation, risk assessment, and emotional triggers",
+      "Documented early insights to inform future product or service opportunities",
+    ],
+    process: [
+      {
+        title: "Exploration",
+        description:
+          "Defined the research scope around hiking, safety perception, and emotional barriers specific to women.",
+      },
+      {
+        title: "User Interviews",
+        description:
+          "Conducted qualitative interviews to understand personal experiences, motivations, and fears related to hiking.",
+      },
+      {
+        title: "Field Observation",
+        description:
+          "Organized and participated in group hikes to observe behaviors, interactions, and decision-making in real contexts.",
+      },
+      {
+        title: "Synthesis",
+        description:
+          "Analyzed recurring themes around safety perception, confidence, and social dynamics shaping outdoor practices.",
+      },
+      {
+        title: "Insight Generation",
+        description:
+          "Identified key opportunity areas to support safer and more empowering hiking experiences.",
+      },
+    ],
+    outcomes: [
+      "Identified key psychological and situational barriers preventing women from hiking alone",
+      "Revealed the importance of perceived safety over actual risk in decision-making",
+      "Highlighted the role of preparation, environment, and social reassurance in building confidence",
+      "Uncovered opportunities to support safer and more autonomous outdoor experiences",
+      "Established a strong foundation for future product or service design",
+    ],
+  },
+  {
+    slug: "virtual-wardrobe-mobile-app",
+    number: "04",
+    link: "https://www.elle.fr/Mode/Les-news-mode/Vera-l-application-de-dressing-virtuel-qui-permet-de-redecouvrir-sa-garde-robe-4007854",
+    title: "Virtual Wardrobe & Outfit Recommendation App",
+    role: "Frontend Developer",
+    description:
+      "Contributed to the development of a mobile app helping users manage their wardrobe and receive contextual outfit suggestions, reducing decision fatigue and encouraging more sustainable fashion habits.",
+    tags: ["Mobile App", "User Experience", "Analytics", "Performance"],
+    impact:
+      "Reached 10,000+ users and validated strong interest in digital wardrobe tools that simplify outfit decisions and promote more mindful clothing usage",
+    timeline: "Jan 2023 — May 2024",
+    team: "1 Designer, 4 Engineers, 1 PM, 1 PO",
+    overview:
+      "Vera is a mobile app that enables users to digitize their wardrobe and receive personalized outfit suggestions based on context such as weather, season, and preferences. The product focuses on simplifying daily decision-making while encouraging users to better use what they already own, supporting more sustainable fashion behaviors.",
+    problem:
+      "How might we help users make better use of their existing wardrobe while reducing the cognitive load of daily outfit decisions?",
+    targetUsers:
+      "People who feel overwhelmed by outfit choices despite owning many clothes, and who are interested in simplifying their routines and adopting more mindful consumption habits.",
+    contribution: [
+      "Developed key interfaces for wardrobe browsing and outfit visualization",
+      "Collaborated closely with design and product teams to deliver intuitive and user-friendly flows",
+      "Implemented analytics tracking to better understand user behavior and inform product decisions",
+      "Optimized navigation and performance to ensure a smooth and responsive mobile experience",
+      "Contributed to improving the clarity and usability of core user journeys",
+    ],
+    process: [
+      {
+        title: "User Understanding",
+        description:
+          "Analyzed user needs around wardrobe management, decision fatigue, and daily routines to inform key product features.",
+      },
+      {
+        title: "Experience Design",
+        description:
+          "Collaborated with designers to shape intuitive flows for adding clothes, browsing outfits, and receiving recommendations.",
+      },
+      {
+        title: "Implementation",
+        description:
+          "Developed mobile interfaces with a focus on usability, performance, and smooth navigation across core journeys.",
+      },
+      {
+        title: "Measurement",
+        description:
+          "Implemented analytics tracking to monitor user behavior, engagement, and key interaction flows.",
+      },
+      {
+        title: "Iteration",
+        description:
+          "Improved features based on user insights and team feedback to enhance usability and engagement.",
+      },
+    ],
+    outcomes: [
+      "Validated strong user interest with 10,000+ active users",
+      "Reduced friction in daily outfit selection through simplified user flows",
+      "Improved user engagement through personalized outfit recommendations",
+      "Enhanced app performance and navigation, leading to a smoother user experience",
+      "Encouraged more mindful and sustainable clothing usage behaviors",
     ],
   },
 ];

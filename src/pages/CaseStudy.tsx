@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import projects from "@/data/projects";
 
 const fadeUp = {
@@ -19,8 +20,13 @@ const CaseStudy = () => {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-display text-3xl text-foreground mb-4">Project not found</h1>
-          <Link to="/work" className="font-body text-sm text-primary hover:underline">
+          <h1 className="font-display text-3xl text-foreground mb-4">
+            Project not found
+          </h1>
+          <Link
+            to="/work"
+            className="font-body text-sm text-primary hover:underline"
+          >
             ← Back to work
           </Link>
         </div>
@@ -80,37 +86,74 @@ const CaseStudy = () => {
             className="grid grid-cols-3 gap-6 py-8 border-y border-border mb-16"
           >
             <div>
-              <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Timeline</p>
-              <p className="font-body text-sm text-foreground">{project.timeline}</p>
+              <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">
+                Timeline
+              </p>
+              <p className="font-body text-sm text-foreground">
+                {project.timeline}
+              </p>
             </div>
             <div>
-              <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Team</p>
-              <p className="font-body text-sm text-foreground">{project.team}</p>
+              <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">
+                Team
+              </p>
+              <p className="font-body text-sm text-foreground">
+                {project.team}
+              </p>
             </div>
             <div>
-              <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Impact</p>
-              <p className="font-body text-sm text-foreground">{project.impact}</p>
+              <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">
+                Impact
+              </p>
+              <p className="font-body text-sm text-foreground">
+                {project.impact}
+              </p>
             </div>
           </motion.div>
 
           {/* Problem */}
-          <motion.section {...fadeUp} transition={{ duration: 0.6 }} className="mb-16">
-            <h2 className="font-display text-2xl text-foreground mb-4">The Problem</h2>
-            <p className="font-body text-muted-foreground leading-relaxed">{project.problem}</p>
+          <motion.section
+            {...fadeUp}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <h2 className="font-display text-2xl text-foreground mb-4">
+              The Problem
+            </h2>
+            <p className="font-body text-muted-foreground leading-relaxed">
+              {project.problem}
+            </p>
           </motion.section>
 
           {/* Target Users */}
-          <motion.section {...fadeUp} transition={{ duration: 0.6 }} className="mb-16">
-            <h2 className="font-display text-2xl text-foreground mb-4">Target Users</h2>
-            <p className="font-body text-muted-foreground leading-relaxed">{project.targetUsers}</p>
+          <motion.section
+            {...fadeUp}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <h2 className="font-display text-2xl text-foreground mb-4">
+              Target Users
+            </h2>
+            <p className="font-body text-muted-foreground leading-relaxed">
+              {project.targetUsers}
+            </p>
           </motion.section>
 
           {/* My Contribution */}
-          <motion.section {...fadeUp} transition={{ duration: 0.6 }} className="mb-16">
-            <h2 className="font-display text-2xl text-foreground mb-4">My Contribution</h2>
+          <motion.section
+            {...fadeUp}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <h2 className="font-display text-2xl text-foreground mb-4">
+              My Contribution
+            </h2>
             <ul className="space-y-3">
               {project.contribution.map((item, i) => (
-                <li key={i} className="font-body text-sm text-muted-foreground flex gap-3">
+                <li
+                  key={i}
+                  className="font-body text-sm text-muted-foreground flex gap-3"
+                >
                   <span className="text-primary mt-0.5">—</span>
                   {item}
                 </li>
@@ -119,19 +162,34 @@ const CaseStudy = () => {
           </motion.section>
 
           {/* Process */}
-          <motion.section {...fadeUp} transition={{ duration: 0.6 }} className="mb-16">
-            <h2 className="font-display text-2xl text-foreground mb-8">Process</h2>
+          <motion.section
+            {...fadeUp}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <h2 className="font-display text-2xl text-foreground mb-8">
+              Process
+            </h2>
             <div className="space-y-0">
               {project.process.map((step, i) => (
-                <div key={i} className="grid md:grid-cols-12 gap-4 py-6 border-b border-border last:border-b-0">
+                <div
+                  key={i}
+                  className="grid md:grid-cols-12 gap-4 py-6 border-b border-border last:border-b-0"
+                >
                   <div className="md:col-span-1">
-                    <span className="font-body text-xs text-muted-foreground">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-body text-xs text-muted-foreground">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
                   </div>
                   <div className="md:col-span-3">
-                    <h3 className="font-display text-lg text-foreground">{step.title}</h3>
+                    <h3 className="font-display text-lg text-foreground">
+                      {step.title}
+                    </h3>
                   </div>
                   <div className="md:col-span-8">
-                    <p className="font-body text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -139,11 +197,20 @@ const CaseStudy = () => {
           </motion.section>
 
           {/* Outcomes */}
-          <motion.section {...fadeUp} transition={{ duration: 0.6 }} className="mb-16">
-            <h2 className="font-display text-2xl text-foreground mb-6">Outcomes</h2>
+          <motion.section
+            {...fadeUp}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <h2 className="font-display text-2xl text-foreground mb-6">
+              Outcomes
+            </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {project.outcomes.map((outcome, i) => (
-                <div key={i} className="p-5 rounded bg-card border border-border">
+                <div
+                  key={i}
+                  className="p-5 rounded bg-card border border-border"
+                >
                   <p className="font-body text-sm text-foreground">{outcome}</p>
                 </div>
               ))}
@@ -151,13 +218,26 @@ const CaseStudy = () => {
           </motion.section>
 
           {/* Tags */}
-          <motion.div {...fadeUp} transition={{ duration: 0.5 }} className="flex flex-wrap gap-2 pt-8 border-t border-border">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 0.5 }}
+            className="flex flex-wrap gap-2 pt-8 border-t border-border mb-16"
+          >
             {project.tags.map((tag) => (
-              <span key={tag} className="font-body text-[11px] px-3 py-1 bg-secondary text-secondary-foreground rounded-sm">
+              <span
+                key={tag}
+                className="font-body text-[11px] px-3 py-1 bg-secondary text-secondary-foreground rounded-sm"
+              >
                 {tag}
               </span>
             ))}
           </motion.div>
+
+          <div className="flex justify-center">
+            <Link to={project.link} target="_blank">
+              <Button variant="link">See project ↗️</Button>
+            </Link>
+          </div>
         </div>
       </main>
 
