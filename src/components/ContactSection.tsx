@@ -27,9 +27,9 @@ const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="font-body text-muted-foreground leading-relaxed mb-10"
           >
-            Open to new opportunities and collaborations. If you’re building
-            something meaningful and want to make it truly work for your users —
-            I’d love to hear from you.
+            Open to new opportunities and collaborations. If you want to design
+            user journeys that actually convert — grounded in research, not
+            assumptions — I'd love to hear from you.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
