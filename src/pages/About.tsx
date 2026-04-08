@@ -112,9 +112,10 @@ const About = () => {
             transition={{ duration: 0.7, delay: 0.35 }}
             className="font-display text-4xl md:text-6xl text-foreground"
           >
-            The person behind experiences
+            The person who turns
             <br />
-            shaped by <span className="text-primary italic">real people</span>.
+            user insights into{" "}
+            <span className="text-primary italic">better decisions</span>.
           </motion.h1>
         </div>
       </section>

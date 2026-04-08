@@ -12,7 +12,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="font-body text-sm tracking-widest uppercase text-muted-foreground mb-6"
             >
-              Problem Solver
+              UX Researcher | Problem Solver
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
@@ -20,10 +20,11 @@ const HeroSection = () => {
               transition={{ duration: 0.7, delay: 0.35 }}
               className="font-display text-5xl md:text-7xl leading-tight text-foreground mb-8"
             >
-              Designing with
+              Don't build what
               <br />
-              <span className="text-primary italic">empathy</span>,<br />
-              building with code.
+              users <span className="text-primary italic">won't</span> use.
+              <br />
+              Research first.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
