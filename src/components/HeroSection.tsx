@@ -20,11 +20,8 @@ const HeroSection = () => {
               transition={{ duration: 0.7, delay: 0.35 }}
               className="font-display text-5xl md:text-7xl leading-tight text-foreground mb-8"
             >
-              Don't build what
-              <br />
-              users <span className="text-primary italic">won't</span> use.
-              <br />
-              Research first.
+              Great engineers.{" "}
+              <span className="text-primary italic">Wrong</span> problem.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -32,8 +29,9 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.55 }}
               className="font-body text-lg text-muted-foreground max-w-lg leading-relaxed"
             >
-              I bridge the gap between what you build and what your users need —
-              so your product performs and your service truly works.
+              I bridge the gap between what you build and what your users
+              actually need — so your product ships right and your service feels
+              right.
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
