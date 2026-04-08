@@ -49,7 +49,7 @@ const WorkSection = () => {
               >
                 <Link to={`/work/${project.slug}`} className="group block">
                   <div
-                    className={`relative rounded bg-card border border-border overflow-hidden hover:border-primary/30 transition-all duration-300 ${
+                    className={`relative rounded bg-card overflow-hidden border border-transparent hover:border-primary/30 transition-all duration-300 ${
                       isLarge ? "p-10 md:p-14" : "p-8 md:p-10"
                     }`}
                   >
