@@ -103,10 +103,10 @@ const CaseStudy = () => {
             </div>
             <div>
               <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">
-                Impact
+                Client
               </p>
               <p className="font-body text-sm text-foreground">
-                {project.impact}
+                {project.client}
               </p>
             </div>
           </motion.div>
@@ -123,6 +123,20 @@ const CaseStudy = () => {
             <p className="font-body text-muted-foreground leading-relaxed">
               {project.problem}
             </p>
+          </motion.section>
+
+          <motion.section
+            {...fadeUp}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <div className="overflow-hidden max-h-[500px] rounded">
+              <img
+                src={project.image}
+                alt="Marie"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.section>
 
           {/* Target Users */}

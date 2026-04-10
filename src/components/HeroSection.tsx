@@ -12,7 +12,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="font-body text-sm tracking-widest uppercase text-muted-foreground my-6"
             >
-              UX Researcher | Problem Solver
+              UX Researcher & Designer
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 24 }}

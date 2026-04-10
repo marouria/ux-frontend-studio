@@ -1,7 +1,9 @@
 export interface Project {
   slug: string;
   number: string;
+  image?: string;
   link?: string;
+  client: string;
   title: string;
   role: string;
   description: string;
@@ -19,68 +21,11 @@ export interface Project {
 
 const projects: Project[] = [
   {
-    slug: "3d-virtual-experience",
-    number: "01",
-    link: "https://artaufeminin.fr/",
-    title: "Immersive 3D Art Discovery Experience",
-    role: "UX Designer",
-    description:
-      "Designed an immersive and intuitive 3D art exploration experience, iteratively refined through usability testing with a community of 8,000 art enthusiasts.",
-    tags: [
-      "User Research",
-      "Usability Testing",
-      "Prototyping",
-      "3D Experience",
-    ],
-    impact: "800 applications for the first exhibition",
-    timeline: "Feb 2026 — Present",
-    team: "1 Designer, 1 Developer",
-    overview:
-      "Designed an immersive online exhibition platform to increase visibility for women artists and enable users to seamlessly discover and purchase artworks.",
-    problem:
-      "How might we design an online art gallery that enables users to explore, discover, and purchase artworks through an intuitive and engaging digital experience?",
-    targetUsers:
-      "Art enthusiasts interested in discovering emerging artists, engaging with art in meaningful ways, and purchasing pieces online. Key segments included first-time buyers and regular collectors.",
-    contribution: [
-      "Validated key user journeys through interactive prototype testing",
-      "Synthesized user feedback into actionable design improvements",
-      "Built the first MVP, translating concepts into a functional product experience",
-      "Iterated on prototypes in close collaboration with users based on research insights",
-      "Presented research findings and design recommendations to stakeholders",
-    ],
-    process: [
-      {
-        title: "Discovery",
-        description:
-          "Defined how a 3D virtual exhibition could support both art discovery and purchasing behaviors, aligning product goals with artists’ visibility needs.",
-      },
-      {
-        title: "Research",
-        description:
-          "Conducted usability tests with a community of 8,000 art enthusiasts to understand how users explore, navigate, and engage with artworks in a 3D environment.",
-      },
-      {
-        title: "Synthesis",
-        description:
-          "Identified key friction points in navigation, spatial orientation, and purchase intent, shaping core user flows for exploration and buying.",
-      },
-      {
-        title: "Ideation",
-        description:
-          "Designed and iterated on 3D interaction patterns and gallery layouts to create a balance between immersion and usability.",
-      },
-      {
-        title: "Validation",
-        description:
-          "Continuously tested prototypes to improve discoverability of artworks and reduce friction in the transition from exploration to purchase.",
-      },
-    ],
-    outcomes: [],
-  },
-  {
     slug: "gamified-skills-assessment-platform",
+    image: "/eva.png",
     number: "06",
     link: "https://eva.anlci.gouv.fr/",
+    client: "Beta.gouv",
     title: "Gamification Platform 🎮",
     role: "Frontend Developer",
     description:
@@ -148,132 +93,12 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "social-innovation-entrepreneurship-program",
-    number: "03",
-    link: "https://www.lp4y.org/",
-    title: "Entrepreneurship Program Design for Disadvantaged Youth",
-    role: "Project Manager",
-    description:
-      "Led user-centered entrepreneurship programs enabling youth facing social and economic barriers to develop job-ready skills through hands-on business creation and iterative learning.",
-    tags: ["Service Design", "User Research", "Facilitation", "Social Impact"],
-    impact:
-      "Improved employability and autonomy of participants through experiential learning programs",
-    timeline: "Jul 2017 — Sept 2019",
-    team: "Cross-functional teams across 17 programs",
-    overview:
-      "LP4Y develops programs where young adults build and manage micro-enterprises to gain professional and entrepreneurial skills. This role focused on designing and scaling user-centered learning experiences that combine real-world business activity, skill development, and continuous feedback.",
-    problem:
-      "How might we help out-of-school young adults build job-ready skills and confidence through hands-on, real-world entrepreneurial experiences?",
-    targetUsers:
-      "Young adults living in informal settlements with limited access to education and employment opportunities, often facing social and economic barriers.",
-    contribution: [
-      "Led and coordinated 17 entrepreneurship programs across Southeast Asia",
-      "Designed learning frameworks and tools adapted to low-resource environments",
-      "Facilitated workshops to help participants ideate, test, and iterate on micro-businesses",
-      "Coached both participants and local trainers in developing sustainable business activities",
-      "Translated field insights into continuous improvements of the programs",
-      "Created structured learning journeys combining experimentation, feedback, and skill-building",
-    ],
-    process: [
-      {
-        title: "User Understanding",
-        description:
-          "Immersed in local contexts to understand participants’ needs, constraints, motivations, and barriers to employment.",
-      },
-      {
-        title: "Co-creation",
-        description:
-          "Facilitated workshops to help participants ideate and shape their own micro-business concepts based on their skills and environment.",
-      },
-      {
-        title: "Experimentation",
-        description:
-          "Supported rapid testing of business ideas through real-world implementation and iteration.",
-      },
-      {
-        title: "Learning Design",
-        description:
-          "Structured learning journeys combining practical experience, feedback loops, and skill development.",
-      },
-      {
-        title: "Iteration & Scaling",
-        description:
-          "Continuously improved program frameworks based on field feedback and scaled them across multiple locations.",
-      },
-    ],
-    outcomes: [
-      "Enabled participants to develop job-ready and entrepreneurial skills through hands-on experience",
-      "Increased participants’ confidence and autonomy in professional environments",
-      "Improved success rate of micro-business initiatives through iterative testing",
-      "Scaled programs across 17 locations with consistent learning frameworks",
-      "Strengthened alignment between training programs and real-world economic opportunities",
-    ],
-  },
-  {
-    slug: "design-system-component-implementation",
-    number: "02",
-    link: "https://propulsebyca.fr/",
-    title: "Design System & Component Library Implementation",
-    role: "Frontend Developer",
-    description:
-      "Developed a scalable and accessible design system for an online banking platform, enabling consistent UI implementation and faster product development.",
-    tags: ["Vuejs", "TypeScript", "Design System", "Accessibility"],
-    impact: "Reduced UI inconsistencies and improved development efficiency",
-    timeline: "Apr 2024 — Sept 2024",
-    team: "1 Designers, 2 Engineers",
-    overview:
-      "Built a unified design system and component library using Vue.js and TypeScript to replace fragmented UI implementations across the platform. Delivered 60+ reusable components, comprehensive documentation, and integrated accessibility standards to ensure consistency, scalability, and compliance.",
-    problem:
-      "How might we standardize UI components across multiple banking interfaces to ensure consistency, accessibility, and scalability while improving developer efficiency?",
-    targetUsers:
-      "Frontend developers and designers working on the banking platform, needing reliable, reusable, and accessible UI components to build consistent user experiences.",
-    contribution: [
-      "Developed 40+ reusable Vue.js components with full TypeScript support",
-      "Collaborated with designers to translate UI specifications into scalable components",
-      "Set up automated accessibility testing within Storybook to ensure WCAG compliance",
-      "Documented components, usage guidelines, and migration paths for adoption",
-      "Contributed to improving consistency and reducing duplication across interfaces",
-    ],
-    process: [
-      {
-        title: "Architecture",
-        description:
-          "Defined the structure of the design system, including component taxonomy, naming conventions, and scalability principles.",
-      },
-      {
-        title: "Foundation",
-        description:
-          "Established core design tokens (colors, typography, spacing) to ensure visual consistency across all components.",
-      },
-      {
-        title: "Implementation",
-        description:
-          "Built reusable and typed Vue.js components aligned with design specifications and engineering best practices.",
-      },
-      {
-        title: "Documentation",
-        description:
-          "Created clear usage guidelines, examples, and migration documentation to support adoption by developers.",
-      },
-      {
-        title: "Validation",
-        description:
-          "Performed regular reviews to ensure compliance and component reliability.",
-      },
-    ],
-    outcomes: [
-      "Full WCAG 2.1 AA compliance across all components",
-      "Decreased time-to-build for new product features",
-      "Accelerated UI implementation through reusable components",
-      "Reduced development time for new features by 25%",
-    ],
-  },
-  {
     slug: "women-hiking-safety-research",
     number: "07",
     link: "https://shecanhike.com/en",
     title: "Women’s Hiking Experience & Safety Research",
     role: "UX Researcher",
+    client: "She Can Hike",
     description:
       "Conducting exploratory user research to understand the barriers, motivations, and safety perceptions of women hiking, with the goal of identifying opportunities to support more confident and independent outdoor experiences.",
     tags: [
@@ -336,10 +161,12 @@ const projects: Project[] = [
   },
   {
     slug: "virtual-wardrobe-mobile-app",
+    image: "/vera.jpg",
     number: "04",
     link: "https://www.elle.fr/Mode/Les-news-mode/Vera-l-application-de-dressing-virtuel-qui-permet-de-redecouvrir-sa-garde-robe-4007854",
     title: "Virtual Wardrobe & Outfit Recommendation App",
     role: "Frontend Developer",
+    client: "Vera",
     description:
       "Contributed to the development of a mobile app helping users manage their wardrobe and receive contextual outfit suggestions, reducing decision fatigue and encouraging more sustainable fashion habits.",
     tags: ["Mobile App", "User Experience", "Analytics", "Performance"],
@@ -393,6 +220,190 @@ const projects: Project[] = [
       "Improved user engagement through personalized outfit recommendations",
       "Enhanced app performance and navigation, leading to a smoother user experience",
       "Encouraged more mindful and sustainable clothing usage behaviors",
+    ],
+  },
+  {
+    slug: "3d-virtual-experience",
+    number: "01",
+    link: "https://artaufeminin.fr/",
+    title: "Immersive 3D Art Discovery Experience",
+    role: "UX Designer",
+    client: "Art au féminin",
+    description:
+      "Designed an immersive and intuitive 3D art exploration experience, iteratively refined through usability testing with a community of 8,000 art enthusiasts.",
+    tags: [
+      "User Research",
+      "Usability Testing",
+      "Prototyping",
+      "3D Experience",
+    ],
+    impact: "800 applications for the first exhibition",
+    timeline: "Feb 2026 — Present",
+    team: "1 Designer, 1 Developer",
+    overview:
+      "Designed an immersive online exhibition platform to increase visibility for women artists and enable users to seamlessly discover and purchase artworks.",
+    problem:
+      "How might we design an online art gallery that enables users to explore, discover, and purchase artworks through an intuitive and engaging digital experience?",
+    targetUsers:
+      "Art enthusiasts interested in discovering emerging artists, engaging with art in meaningful ways, and purchasing pieces online. Key segments included first-time buyers and regular collectors.",
+    contribution: [
+      "Validated key user journeys through interactive prototype testing",
+      "Synthesized user feedback into actionable design improvements",
+      "Built the first MVP, translating concepts into a functional product experience",
+      "Iterated on prototypes in close collaboration with users based on research insights",
+      "Presented research findings and design recommendations to stakeholders",
+    ],
+    process: [
+      {
+        title: "Discovery",
+        description:
+          "Defined how a 3D virtual exhibition could support both art discovery and purchasing behaviors, aligning product goals with artists’ visibility needs.",
+      },
+      {
+        title: "Research",
+        description:
+          "Conducted usability tests with a community of 8,000 art enthusiasts to understand how users explore, navigate, and engage with artworks in a 3D environment.",
+      },
+      {
+        title: "Synthesis",
+        description:
+          "Identified key friction points in navigation, spatial orientation, and purchase intent, shaping core user flows for exploration and buying.",
+      },
+      {
+        title: "Ideation",
+        description:
+          "Designed and iterated on 3D interaction patterns and gallery layouts to create a balance between immersion and usability.",
+      },
+      {
+        title: "Validation",
+        description:
+          "Continuously tested prototypes to improve discoverability of artworks and reduce friction in the transition from exploration to purchase.",
+      },
+    ],
+    outcomes: [],
+  },
+  {
+    slug: "social-innovation-entrepreneurship-program",
+    number: "03",
+    link: "https://www.lp4y.org/",
+    title: "Entrepreneurship Program Design for Disadvantaged Youth",
+    role: "Project Manager",
+    client: "LP4Y",
+    description:
+      "Led user-centered entrepreneurship programs enabling youth facing social and economic barriers to develop job-ready skills through hands-on business creation and iterative learning.",
+    tags: ["Service Design", "User Research", "Facilitation", "Social Impact"],
+    impact:
+      "Improved employability and autonomy of participants through experiential learning programs",
+    timeline: "Jul 2017 — Sept 2019",
+    team: "Cross-functional teams across 17 programs",
+    overview:
+      "LP4Y develops programs where young adults build and manage micro-enterprises to gain professional and entrepreneurial skills. This role focused on designing and scaling user-centered learning experiences that combine real-world business activity, skill development, and continuous feedback.",
+    problem:
+      "How might we help out-of-school young adults build job-ready skills and confidence through hands-on, real-world entrepreneurial experiences?",
+    targetUsers:
+      "Young adults living in informal settlements with limited access to education and employment opportunities, often facing social and economic barriers.",
+    contribution: [
+      "Led and coordinated 17 entrepreneurship programs across Southeast Asia",
+      "Designed learning frameworks and tools adapted to low-resource environments",
+      "Facilitated workshops to help participants ideate, test, and iterate on micro-businesses",
+      "Coached both participants and local trainers in developing sustainable business activities",
+      "Translated field insights into continuous improvements of the programs",
+      "Created structured learning journeys combining experimentation, feedback, and skill-building",
+    ],
+    process: [
+      {
+        title: "User Understanding",
+        description:
+          "Immersed in local contexts to understand participants’ needs, constraints, motivations, and barriers to employment.",
+      },
+      {
+        title: "Co-creation",
+        description:
+          "Facilitated workshops to help participants ideate and shape their own micro-business concepts based on their skills and environment.",
+      },
+      {
+        title: "Experimentation",
+        description:
+          "Supported rapid testing of business ideas through real-world implementation and iteration.",
+      },
+      {
+        title: "Learning Design",
+        description:
+          "Structured learning journeys combining practical experience, feedback loops, and skill development.",
+      },
+      {
+        title: "Iteration & Scaling",
+        description:
+          "Continuously improved program frameworks based on field feedback and scaled them across multiple locations.",
+      },
+    ],
+    outcomes: [
+      "Enabled participants to develop job-ready and entrepreneurial skills through hands-on experience",
+      "Increased participants’ confidence and autonomy in professional environments",
+      "Improved success rate of micro-business initiatives through iterative testing",
+      "Scaled programs across 17 locations with consistent learning frameworks",
+      "Strengthened alignment between training programs and real-world economic opportunities",
+    ],
+  },
+  {
+    slug: "design-system-component-implementation",
+    image: "/credit_agricole.png",
+    number: "02",
+    link: "https://propulsebyca.fr/",
+    title: "Design System & Component Library Implementation",
+    role: "Frontend Developer",
+    client: "Crédit Agricole",
+    description:
+      "Developed a scalable and accessible design system for an online banking platform, enabling consistent UI implementation and faster product development.",
+    tags: ["Vuejs", "TypeScript", "Design System", "Accessibility"],
+    impact: "Reduced UI inconsistencies and improved development efficiency",
+    timeline: "Apr 2024 — Sept 2024",
+    team: "1 Designers, 2 Engineers",
+    overview:
+      "Built a unified design system and component library using Vue.js and TypeScript to replace fragmented UI implementations across the platform. Delivered 60+ reusable components, comprehensive documentation, and integrated accessibility standards to ensure consistency, scalability, and compliance.",
+    problem:
+      "How might we standardize UI components across multiple banking interfaces to ensure consistency, accessibility, and scalability while improving developer efficiency?",
+    targetUsers:
+      "Frontend developers and designers working on the banking platform, needing reliable, reusable, and accessible UI components to build consistent user experiences.",
+    contribution: [
+      "Developed 40+ reusable Vue.js components with full TypeScript support",
+      "Collaborated with designers to translate UI specifications into scalable components",
+      "Set up automated accessibility testing within Storybook to ensure WCAG compliance",
+      "Documented components, usage guidelines, and migration paths for adoption",
+      "Contributed to improving consistency and reducing duplication across interfaces",
+    ],
+    process: [
+      {
+        title: "Architecture",
+        description:
+          "Defined the structure of the design system, including component taxonomy, naming conventions, and scalability principles.",
+      },
+      {
+        title: "Foundation",
+        description:
+          "Established core design tokens (colors, typography, spacing) to ensure visual consistency across all components.",
+      },
+      {
+        title: "Implementation",
+        description:
+          "Built reusable and typed Vue.js components aligned with design specifications and engineering best practices.",
+      },
+      {
+        title: "Documentation",
+        description:
+          "Created clear usage guidelines, examples, and migration documentation to support adoption by developers.",
+      },
+      {
+        title: "Validation",
+        description:
+          "Performed regular reviews to ensure compliance and component reliability.",
+      },
+    ],
+    outcomes: [
+      "Full WCAG 2.1 AA compliance across all components",
+      "Decreased time-to-build for new product features",
+      "Accelerated UI implementation through reusable components",
+      "Reduced development time for new features by 25%",
     ],
   },
 ];
